@@ -1,0 +1,32 @@
+<div id="myDetails">
+    <h1>Director details</h1>
+    <div ng-repeat="x in myDirector">
+        <img ng-src="{{x.image}}" class="img-responsive img-circle" alt="{{x.fullName}}">
+        <h3>{{x.fullName}}</h3>
+        <p>{{x.bio}}</p>
+        <h4>Overview</h4>
+        <ul>
+            <li>Date of Birth: {{x.dob | date:'dd/MM/yyyy'}}</li>
+            <li>Age: {{x.age}}</li>
+            <li>Sex: {{x.sex}}</li>
+            <li>Country: {{x.nationality}}</li>
+            <li>State: {{x.state}}, City: {{x.city}}</li>
+        </ul>
+        <div ng-if="x.spouse.length !== 0">
+        <h4>Spouse</h4>
+        <p>{{x.spouse}}</p>
+        </div>
+        <div ng-if="x.children.length !== 0">
+        <h4>Children</h4>
+        <p>{{x.children}}</p>
+        </div>
+        <h4>Blockbusters</h4>
+        <ul ng-repeat="movie in x.blockbusters">
+            <li>{{movie.movieName}}</li>
+            <li>{{movie.release}}</li>
+        </ul>
+        
+
+    </div>
+  <a href="#/" class="btn btn-info" role="button">Back</a>
+</div>

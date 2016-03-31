@@ -1,0 +1,27 @@
+<div id="myTable">
+    <h1>Directors</h1>
+    <table class="col-md-12 table-bordered table-striped table-condensed cf">
+        <thead class="cf">
+            <tr>
+                <th>Name</th>
+                <th>Sex</th>
+                <th>Nationality</th>
+                <th>City</th>
+                <th class="numeric">Date of Birth</th>
+                <th class="numeric">Age</th>
+                <th>Blockbuster</th>
+            </tr>
+        </thead>
+        <tbody>
+        			<tr ng-repeat="x in myDirectors">
+        				<td data-title="Name"><a href="#/about">{{x.name}}</a></td>
+        				<td data-title="Sex">{{x.sex}}</td>
+        				<td data-title="Nationality">{{x.nationality}}</td>
+        				<td data-title="City">{{x.city}}</td>
+        				<td data-title="Date of Birth" class="numeric">{{x.dob | date:'dd/MM/yyyy'}}</td>
+        				<td data-title="Age" class="numeric">{{x.age}}</td>
+                        <td data-title="Blockbuster">{{x.blockbuster}}</td>
+        			</tr>
+        </tbody>
+    </table>
+</div>
